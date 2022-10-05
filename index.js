@@ -15,15 +15,14 @@ function getCaption() {
     let part = partLines[Math.floor(Math.random()*partLines.length)];
     let object = objectLines[Math.floor(Math.random()*objectLines.length)];
 
-    let caption = `${verb} his ${part} with a ${object}`;
-    return caption;
+    return `${verb} his ${part} with a ${object}`;
+    
 }
 function getPhotoURL() {
     const CLIENT = createClient(PEXELS_API_KEY);
     let photos = CLIENT.photos.search({ query: "men", per_page: 80, page: 1});
     let sourceID = photos[Math.floor(Math.random()*photos.length)];
-    let sourceURL = "https://api.pexels.com/v1/photos/" + String(sourceID);
-    return sourceURL;
+    return "https://api.pexels.com/v1/photos/" + String(sourceID);
 }
 
 console.log(getCaption());
