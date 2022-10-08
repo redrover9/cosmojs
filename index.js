@@ -1,7 +1,6 @@
 import { createClient } from 'pexels';
 import * as fs from 'fs';
 import * as https from 'https';
-//import * as download from 'image-downloader';
 
 const PEXELS_API_KEY = process.env.PEXELS_API_KEY;
 const CLIENT = createClient(PEXELS_API_KEY);
@@ -28,7 +27,7 @@ function getPhotos() {
 }
 function getPhoto() {
     const options = {
-        headers: {Authorization: '563492ad6f917000010000013b1a79b311cd4c21b192e0ca707a8a4b'}
+        headers: {Authorization: PEXELS_API_KEY}
     }
     getPhotos().then(function(value) {https.get(value, options, (res) => {
         res.pipe(fs.createWriteStream("dude.jpg"));
