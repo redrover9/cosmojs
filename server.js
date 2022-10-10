@@ -1,5 +1,5 @@
-var http = require('http');
-var fs = require('fs');
+import * as fs from 'fs';
+import * as http from 'http';
 
 const PORT=8080; 
 
