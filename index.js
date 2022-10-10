@@ -29,9 +29,16 @@ function getPhoto() {
     const options = {
         headers: {Authorization: PEXELS_API_KEY}
     }
-    getPhotos().then(function(value) {https.get(value, options, (res) => {
-        res.pipe(fs.createWriteStream("dude.jpg"));
+    getPhotos().then(function(value) {https.get(value, options, function(res) {
+        return res.pipe(fs.createWriteStream("dude.jpg"));
     })});
 }
-getCaption();
+function getFont() {
+    let fonts = ["Herr_Von_Muellerhoff/HerrVonMuellerhoff-Regular.ttf", "Homemade_Apple/HomemadeApple-Regular.ttf", "Inspiration/Inspiration-Regular.ttf", "Pacifico/Pacifico-regular.ttf"];
+    let font = Math.floor(Math.random()*fonts.length);
+    return font;
+}
+function captionPhoto() {
+    
+}
 getPhoto();
