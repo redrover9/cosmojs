@@ -3,7 +3,7 @@ import * as http from 'http';
 import * as https from 'https';
 import { createClient } from 'pexels';
 
-const PORT=8080; 
+const PORT=80; 
 const PEXELS_API_KEY = process.env.PEXELS_API_KEY;
 const CLIENT = createClient(PEXELS_API_KEY);
 
