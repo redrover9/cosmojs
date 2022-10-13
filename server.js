@@ -77,4 +77,4 @@ function serveHTML() {
 });
 }
 downloadPhoto();
-serveHTML();
+//serveHTML();
