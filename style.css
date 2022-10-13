@@ -4,6 +4,11 @@ img {
     width: auto;
 }
 .image {
+    position: relative;
+    text-align: center;
+    color: pink;
+  }
+.text {
     position: absolute;
     top: 50%;
     left: 50%;
